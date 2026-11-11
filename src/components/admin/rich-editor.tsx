@@ -91,7 +91,7 @@ export function RichEditor({ value, onChange, placeholder = "Start writing…", 
   if (!editor) {
     return (
       <div className="grid min-h-[320px] place-items-center rounded-xl border border-white/10 bg-black/20">
-        <Loader2 size={18} className="animate-spin text-[#ff7a6b]" />
+        <Loader2 size={18} className="animate-spin text-[#b794f6]" />
       </div>
     );
   }
@@ -127,7 +127,7 @@ export function RichEditor({ value, onChange, placeholder = "Start writing…", 
       title={label}
       aria-label={label}
       className={`grid h-7 w-7 place-items-center rounded-md transition-colors ${
-        active ? "bg-[#ff7a6b] text-[#0b0714]" : "text-white/40 hover:bg-white/8 hover:text-white/80"
+        active ? "bg-[#b794f6] text-[#0b0817]" : "text-white/40 hover:bg-white/8 hover:text-white/80"
       } disabled:opacity-25`}
     >
       {children}

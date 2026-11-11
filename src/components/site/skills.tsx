@@ -19,9 +19,9 @@ type Skill = {
 
 const categoryTones: Record<string, { base: string; soft: string }> = {
   Frontend: { base: "var(--accent)", soft: "var(--accent-soft)" },
-  Backend: { base: "var(--accent-2)", soft: "#8ff5e2" },
-  Database: { base: "var(--accent-3)", soft: "#c9b8ff" },
-  Tools: { base: "var(--accent-soft)", soft: "#ffe0d6" },
+  Backend: { base: "var(--accent-2)", soft: "#f7c6dc" },
+  Database: { base: "var(--accent-3)", soft: "#bcd4ff" },
+  Tools: { base: "var(--accent-soft)", soft: "#f2e6ff" },
 };
 
 function toneFor(category: string) {
@@ -52,13 +52,14 @@ export function Skills({ skills, copy }: { skills: Skill[]; copy: SectionCopy })
                   key={skill._id || skill.name}
                   initial={{ opacity: 0, y: 18 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ y: -6, transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] } }}
                   viewport={{ once: true, margin: "-8%" }}
                   transition={{ duration: 0.5, delay: Math.min(index * 0.03, 0.3) }}
-                  className="group relative overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--line-strong)] hover:bg-[var(--surface-soft)]"
+                  className="skill-card group relative overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-5"
                   style={{ "--tone": tone.base, "--tone-soft": tone.soft } as CSSProperties}
                 >
                   <span
-                    className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-30"
+                    className="skill-glow pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-30"
                     style={{ background: tone.base }}
                     aria-hidden
                   />
@@ -87,7 +88,7 @@ export function Skills({ skills, copy }: { skills: Skill[]; copy: SectionCopy })
                       </span>
                       <div className="min-w-0">
                         <h3 className="truncate text-[0.95rem] font-semibold text-[var(--foreground)]">{skill.name}</h3>
-                        <p className="mt-0.5 text-[0.52rem] uppercase tracking-[0.18em] text-[var(--muted)]">
+                        <p className="mt-0.5 text-[0.62rem] font-medium uppercase tracking-[0.16em] text-[var(--muted)]">
                           {skill.category}
                         </p>
                       </div>

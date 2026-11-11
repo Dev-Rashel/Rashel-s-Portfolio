@@ -22,7 +22,7 @@ export function HeroAtmosphere() {
 
     type Particle = { x: number; y: number; vx: number; vy: number; r: number; alpha: number; color: string };
     let particles: Particle[] = [];
-    const palette = ["255,122,107", "75,225,195", "167,139,250", "255,196,173"];
+    const palette = ["183,148,246", "240,166,202", "143,184,255", "234,220,255"];
 
     const resize = () => {
       const rect = canvas.getBoundingClientRect();

@@ -162,7 +162,7 @@ export function AdminShell({
     <div className="flex h-full flex-col">
       <div className={cn("flex h-[74px] items-center border-b border-white/8 px-5", collapsed ? "justify-center" : "justify-between")}>
         <Link href="/admin/dashboard" className="flex items-center gap-3 overflow-hidden">
-          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[#ff7a6b]/30 bg-[#ff7a6b]/10 font-display text-sm text-[#ff7a6b]">
+          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[#b794f6]/30 bg-[#b794f6]/10 font-display text-sm text-[#b794f6]">
             RM
           </span>
           {!collapsed && (
@@ -196,7 +196,7 @@ export function AdminShell({
                     title={collapsed ? item.label : undefined}
                     className={cn(
                       "group relative flex items-center gap-3 rounded-lg px-2.5 py-2.5 text-[0.72rem] transition-all duration-200",
-                      active ? "text-[#f6f1ff]" : "text-white/40 hover:bg-white/[0.03] hover:text-white/75",
+                      active ? "text-[#f4f0fc]" : "text-white/40 hover:bg-white/[0.03] hover:text-white/75",
                       collapsed && "justify-center"
                     )}
                   >
@@ -207,10 +207,10 @@ export function AdminShell({
                         transition={{ type: "spring", stiffness: 380, damping: 34 }}
                       />
                     )}
-                    <Icon size={15} strokeWidth={1.6} className={cn("relative z-10 shrink-0", active && "text-[#ff7a6b]")} />
+                    <Icon size={15} strokeWidth={1.6} className={cn("relative z-10 shrink-0", active && "text-[#b794f6]")} />
                     {!collapsed && <span className="relative z-10 flex-1 truncate">{item.label}</span>}
                     {!collapsed && item.badge && unread > 0 && (
-                      <span className="relative z-10 rounded-full bg-[#ff7a6b] px-1.5 py-0.5 text-[0.48rem] font-bold text-[#0b0714]">{unread}</span>
+                      <span className="relative z-10 rounded-full bg-[#b794f6] px-1.5 py-0.5 text-[0.48rem] font-bold text-[#0b0817]">{unread}</span>
                     )}
                   </Link>
                 );
@@ -244,27 +244,27 @@ export function AdminShell({
 
   return (
     <div
-      className="admin-root min-h-screen bg-[#0b0714] text-[#f6f1ff]"
+      className="admin-root min-h-screen bg-[#0b0817] text-[#f4f0fc]"
       style={
         {
-          "--background": "#0b0714",
-          "--background-elevated": "#120c20",
-          "--surface": "#171024",
-          "--foreground": "#f6f1ff",
-          "--foreground-soft": "#c7c3b9",
-          "--muted": "#918d84",
+          "--background": "#0b0817",
+          "--background-elevated": "#0f0b20",
+          "--surface": "#151027",
+          "--foreground": "#f4f0fc",
+          "--foreground-soft": "#c9c2df",
+          "--muted": "#9189aa",
           "--line": "rgba(255,255,255,0.09)",
           "--line-strong": "rgba(255,255,255,0.17)",
-          "--accent": "#ff7a6b",
-          "--accent-soft": "#ffc4ad",
-          "--accent-rgb": "255,122,107",
+          "--accent": "#b794f6",
+          "--accent-soft": "#eadcff",
+          "--accent-rgb": "183,148,246",
           "--card": "rgba(255,255,255,0.025)",
         } as React.CSSProperties
       }
     >
       <aside
         className={cn(
-          "fixed inset-y-0 left-0 z-50 hidden border-r border-white/8 bg-[#151024] transition-[width] duration-300 lg:block",
+          "fixed inset-y-0 left-0 z-50 hidden border-r border-white/8 bg-[#1a1430] transition-[width] duration-300 lg:block",
           collapsed ? "w-[78px]" : "w-[260px]"
         )}
       >
@@ -282,7 +282,7 @@ export function AdminShell({
               onClick={() => setMobileOpen(false)}
             />
             <motion.aside
-              className="fixed inset-y-0 left-0 z-[61] w-[280px] border-r border-white/8 bg-[#151024] lg:hidden"
+              className="fixed inset-y-0 left-0 z-[61] w-[280px] border-r border-white/8 bg-[#1a1430] lg:hidden"
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
@@ -298,7 +298,7 @@ export function AdminShell({
       </AnimatePresence>
 
       <div className={cn("transition-[margin] duration-300", collapsed ? "lg:ml-[78px]" : "lg:ml-[260px]")}>
-        <header className="sticky top-0 z-40 border-b border-white/8 bg-[#0b0714]/80 backdrop-blur-xl">
+        <header className="sticky top-0 z-40 border-b border-white/8 bg-[#0b0817]/80 backdrop-blur-xl">
           <div className="flex h-[74px] items-center justify-between gap-4 px-5 sm:px-7">
             <div className="flex min-w-0 items-center gap-3">
               <button type="button" onClick={() => setMobileOpen(true)} className="text-white/50 lg:hidden" aria-label="Open menu">
@@ -310,17 +310,17 @@ export function AdminShell({
                   <span>/</span>
                   <span className="truncate text-white/40">{meta.title}</span>
                 </div>
-                <h1 className="mt-0.5 truncate font-display text-xl leading-tight text-[#f6f1ff] sm:text-2xl">{meta.title}</h1>
+                <h1 className="mt-0.5 truncate font-display text-xl leading-tight text-[#f4f0fc] sm:text-2xl">{meta.title}</h1>
               </div>
             </div>
 
             <div className="flex items-center gap-2">
               <Link href="/admin/dashboard/messages" className="relative grid h-9 w-9 place-items-center rounded-full border border-white/8 text-white/45 transition-colors hover:border-white/20 hover:text-white/80" aria-label="Messages">
                 <Mail size={14} />
-                {unread > 0 && <span className="absolute right-1.5 top-1.5 h-1.5 w-1.5 rounded-full bg-[#ff7a6b]" />}
+                {unread > 0 && <span className="absolute right-1.5 top-1.5 h-1.5 w-1.5 rounded-full bg-[#b794f6]" />}
               </Link>
               <div className="hidden items-center gap-2.5 rounded-full border border-white/8 py-1 pl-1 pr-3 sm:flex">
-                <span className="grid h-7 w-7 place-items-center rounded-full bg-[#ff7a6b]/15 font-display text-[0.62rem] text-[#ff7a6b]">
+                <span className="grid h-7 w-7 place-items-center rounded-full bg-[#b794f6]/15 font-display text-[0.62rem] text-[#b794f6]">
                   {session.name.slice(0, 1).toUpperCase()}
                 </span>
                 <div className="leading-none">

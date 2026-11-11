@@ -56,7 +56,7 @@ export function ImageUploader({
       {label && <label className="field-label">{label}</label>}
       <div
         className={`relative overflow-hidden rounded-xl border border-dashed bg-black/20 transition-colors ${
-          dragging ? "border-[#ff7a6b]" : "border-white/12 hover:border-white/25"
+          dragging ? "border-[#b794f6]" : "border-white/12 hover:border-white/25"
         }`}
         onDragOver={(event) => {
           event.preventDefault();
@@ -99,14 +99,14 @@ export function ImageUploader({
             onClick={() => inputRef.current?.click()}
             className="flex w-full flex-col items-center justify-center gap-2 px-4 py-8 text-center"
           >
-            {uploading ? <Loader2 size={20} className="animate-spin text-[#ff7a6b]" /> : <ImagePlus size={20} className="text-white/25" />}
+            {uploading ? <Loader2 size={20} className="animate-spin text-[#b794f6]" /> : <ImagePlus size={20} className="text-white/25" />}
             <span className="text-[0.62rem] text-white/45">{uploading ? "Uploading…" : "Click or drop an image"}</span>
             <span className="text-[0.5rem] uppercase tracking-[0.12em] text-white/20">JPG, PNG, WebP · max 8MB</span>
           </button>
         )}
         {uploading && value && (
           <div className="absolute inset-0 grid place-items-center bg-black/50">
-            <Loader2 size={20} className="animate-spin text-[#ff7a6b]" />
+            <Loader2 size={20} className="animate-spin text-[#b794f6]" />
           </div>
         )}
       </div>
@@ -220,7 +220,7 @@ export function FileUploader({
     <div>
       <label className="field-label">{label}</label>
       <div className="flex flex-wrap items-center gap-3 rounded-xl border border-dashed border-white/12 bg-black/20 p-4">
-        <span className="grid h-10 w-10 place-items-center rounded-lg bg-[#ff7a6b]/10 text-[#ff7a6b]">
+        <span className="grid h-10 w-10 place-items-center rounded-lg bg-[#b794f6]/10 text-[#b794f6]">
           {uploading ? <Loader2 size={16} className="animate-spin" /> : <UploadCloud size={16} />}
         </span>
         <div className="min-w-0 flex-1">
@@ -229,7 +229,7 @@ export function FileUploader({
         </div>
         <div className="flex items-center gap-2">
           {value && (
-            <a href={value} target="_blank" rel="noopener noreferrer" className="text-[0.55rem] uppercase tracking-[0.12em] text-[#ff7a6b] underline underline-offset-2">
+            <a href={value} target="_blank" rel="noopener noreferrer" className="text-[0.55rem] uppercase tracking-[0.12em] text-[#b794f6] underline underline-offset-2">
               View
             </a>
           )}

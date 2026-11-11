@@ -330,13 +330,13 @@ export function SettingsManager() {
 
       <div
         className={`sticky bottom-4 z-20 mt-5 flex items-center justify-between gap-3 rounded-xl border px-4 py-3 backdrop-blur-xl transition-all ${
-          dirty ? "border-[#ff7a6b]/25 bg-[#171024]/95 shadow-2xl" : "pointer-events-none border-white/5 bg-[#120c20]/70 opacity-60"
+          dirty ? "border-[#b794f6]/25 bg-[#151027]/95 shadow-2xl" : "pointer-events-none border-white/5 bg-[#0f0b20]/70 opacity-60"
         }`}
       >
         <p className="flex items-center gap-2 text-[0.58rem] uppercase tracking-[0.14em] text-white/35">
           {dirty ? (
             <>
-              <span className="h-1.5 w-1.5 rounded-full bg-[#ff7a6b]" /> You have unsaved changes
+              <span className="h-1.5 w-1.5 rounded-full bg-[#b794f6]" /> You have unsaved changes
             </>
           ) : (
             <>

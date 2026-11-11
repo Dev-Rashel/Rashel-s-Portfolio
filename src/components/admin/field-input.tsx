@@ -38,7 +38,7 @@ export function FieldInput({ field, value, onChange, compact = false }: FieldInp
         <>
           <label className="field-label">
             {field.label}
-            {field.required && <span className="ml-1 text-[#ff7a6b]">*</span>}
+            {field.required && <span className="ml-1 text-[#b794f6]">*</span>}
           </label>
           <FieldControl field={field} value={value} onChange={onChange} />
           {field.help && <p className="mt-1.5 text-[0.56rem] leading-relaxed text-white/30">{field.help}</p>}
@@ -95,14 +95,14 @@ function FieldControl({
         <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-black/20 px-3 py-2.5">
           <input
             type="range"
-            className="h-1 flex-1 cursor-pointer appearance-none rounded-full bg-white/10 accent-[#ff7a6b]"
+            className="h-1 flex-1 cursor-pointer appearance-none rounded-full bg-white/10 accent-[#b794f6]"
             value={Number(value) || 0}
             min={field.min ?? 0}
             max={field.max ?? 100}
             step={field.step ?? 1}
             onChange={(event) => onChange(Number(event.target.value))}
           />
-          <span className="w-10 text-right text-[0.64rem] tabular-nums text-[#ff7a6b]">{Number(value) || 0}</span>
+          <span className="w-10 text-right text-[0.64rem] tabular-nums text-[#b794f6]">{Number(value) || 0}</span>
         </div>
       );
 
@@ -110,7 +110,7 @@ function FieldControl({
       return (
         <select className="field !text-[0.82rem]" value={text} onChange={(event) => onChange(event.target.value)} required={field.required}>
           {(field.options || []).map((option) => (
-            <option key={option.value} value={option.value} className="bg-[#171024]">
+            <option key={option.value} value={option.value} className="bg-[#151027]">
               {option.label}
             </option>
           ))}
@@ -194,7 +194,7 @@ function FieldControl({
         <div className="flex items-center gap-2">
           <input
             type="color"
-            value={text || "#ff7a6b"}
+            value={text || "#b794f6"}
             onChange={(event) => onChange(event.target.value)}
             className="h-10 w-12 cursor-pointer rounded-lg border border-white/10 bg-black/20 p-1"
             aria-label={`${field.label} colour`}
@@ -203,7 +203,7 @@ function FieldControl({
             className="field"
             value={text}
             onChange={(event) => onChange(event.target.value)}
-            placeholder={field.placeholder || "#ff7a6b"}
+            placeholder={field.placeholder || "#b794f6"}
           />
         </div>
       );
@@ -244,12 +244,12 @@ export function Toggle({
       onClick={() => onChange(!checked)}
       className={cn(
         "relative h-5 w-9 shrink-0 rounded-full border transition-colors duration-200",
-        checked ? "border-[#ff7a6b]/40 bg-[#ff7a6b]" : "border-white/15 bg-white/10"
+        checked ? "border-[#b794f6]/40 bg-[#b794f6]" : "border-white/15 bg-white/10"
       )}
     >
       <span
         className={cn(
-          "absolute top-0.5 h-3.5 w-3.5 rounded-full bg-[#0b0714] transition-transform duration-200",
+          "absolute top-0.5 h-3.5 w-3.5 rounded-full bg-[#0b0817] transition-transform duration-200",
           checked ? "translate-x-[1.15rem]" : "translate-x-0.5 bg-white/60"
         )}
       />
@@ -291,7 +291,7 @@ function TagInput({
       {value.map((tag) => (
         <span
           key={tag}
-          className="inline-flex items-center gap-1 rounded-full border border-[#ff7a6b]/20 bg-[#ff7a6b]/10 px-2 py-0.5 text-[0.58rem] text-[#ff7a6b]"
+          className="inline-flex items-center gap-1 rounded-full border border-[#b794f6]/20 bg-[#b794f6]/10 px-2 py-0.5 text-[0.58rem] text-[#b794f6]"
         >
           {tag}
           <button
@@ -300,7 +300,7 @@ function TagInput({
               event.stopPropagation();
               onChange(value.filter((item) => item !== tag));
             }}
-            className="text-[#ff7a6b]/60 hover:text-[#ffc4ad]"
+            className="text-[#b794f6]/60 hover:text-[#eadcff]"
             aria-label={`Remove ${tag}`}
           >
             <X size={9} />
@@ -428,7 +428,7 @@ function RepeaterInput({
         <button
           type="button"
           onClick={add}
-          className="inline-flex items-center gap-1 rounded-full border border-[#ff7a6b]/25 bg-[#ff7a6b]/10 px-2.5 py-1 text-[0.52rem] font-bold uppercase tracking-[0.12em] text-[#ff7a6b] transition-colors hover:bg-[#ff7a6b]/15"
+          className="inline-flex items-center gap-1 rounded-full border border-[#b794f6]/25 bg-[#b794f6]/10 px-2.5 py-1 text-[0.52rem] font-bold uppercase tracking-[0.12em] text-[#b794f6] transition-colors hover:bg-[#b794f6]/15"
         >
           <Plus size={10} /> {field.addLabel || "Add item"}
         </button>

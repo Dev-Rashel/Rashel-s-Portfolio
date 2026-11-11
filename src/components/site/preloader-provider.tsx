@@ -83,7 +83,7 @@ export function PreloaderProvider({
       <AnimatePresence>
         {visible && (
           <motion.div
-            className="fixed inset-0 z-[200] flex flex-col justify-between overflow-hidden bg-[#0b0714] px-6 py-6 text-[#f6f1ff] sm:px-10 sm:py-8"
+            className="fixed inset-0 z-[200] flex flex-col justify-between overflow-hidden bg-[#0b0817] px-6 py-6 text-[#f4f0fc] sm:px-10 sm:py-8"
             exit={{ clipPath: "inset(0 0 100% 0)" }}
             transition={{ duration: 0.95, ease: [0.76, 0, 0.24, 1] }}
             aria-label="Loading portfolio"
@@ -107,7 +107,7 @@ export function PreloaderProvider({
                 transition={{ delay: 0.2, duration: 0.8 }}
                 className="text-center font-display text-[clamp(2.6rem,7.2vw,5.8rem)] leading-[0.86] tracking-[-0.04em]"
               >
-                A considered <span className="italic text-[#ff7a6b]">first impression.</span>
+                A considered <span className="italic text-[#b794f6]">first impression.</span>
               </motion.p>
             </div>
 
@@ -118,7 +118,7 @@ export function PreloaderProvider({
               </div>
               <div className="h-px w-full overflow-hidden bg-white/15">
                 <motion.div
-                  className="h-full bg-[#ff7a6b]"
+                  className="h-full bg-[#b794f6]"
                   style={{ width: `${progress}%` }}
                   transition={{ ease: "linear" }}
                 />

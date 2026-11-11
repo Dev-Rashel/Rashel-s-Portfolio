@@ -62,7 +62,7 @@ export function Projects({ projects, copy }: { projects: Project[]; copy: Sectio
                   className="group flex items-center gap-2 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-[var(--foreground)]"
                 >
                   All projects
-                  <span className="grid h-8 w-8 place-items-center rounded-full border border-[var(--line-strong)] transition-all duration-300 group-hover:border-[var(--accent)] group-hover:bg-[var(--accent)] group-hover:text-[#0b0714]">
+                  <span className="grid h-8 w-8 place-items-center rounded-full border border-[var(--line-strong)] transition-all duration-300 group-hover:border-[var(--accent)] group-hover:bg-[var(--accent)] group-hover:text-[#0b0817]">
                     <ArrowUpRight size={13} />
                   </span>
                 </Link>

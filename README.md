@@ -236,9 +236,9 @@ After deploying, sign in at `https://your-domain.com/admin`.
 
 ## Design system
 
-- **Background:** deep violet `#0b0714`
-- **Foreground:** lavender white `#f6f1ff`
-- **Accents:** coral `#ff7a6b`, peach `#ffc4ad`, mint `#4be1c3`, violet `#a78bfa`
+- **Background:** deep indigo `#0b0817`
+- **Foreground:** lavender white `#f4f0fc`
+- **Accents:** lavender `#b794f6`, rose `#f0a6ca`, periwinkle `#8fb8ff`, soft lilac `#eadcff`
 - **Display type:** Instrument Serif
 - **Body type:** Manrope variable
 - **Admin palette:** fixed violet control-room palette scoped under `.admin-root`, independent of public theme changes.

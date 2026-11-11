@@ -6,11 +6,11 @@ import { SingletonForm, type SingletonGroup } from "@/components/admin/singleton
 const SETTINGS_ENDPOINT = "/api/admin/settings";
 
 const PALETTE_FIELDS: AdminField[] = [
-  { name: "colors.accent", label: "Accent", type: "color", defaultValue: "#ff7a6b", help: "Links, highlights, and the primary button." },
-  { name: "colors.accentSoft", label: "Accent soft", type: "color", defaultValue: "#ffc4ad", help: "Italic display type and quiet emphasis." },
-  { name: "colors.background", label: "Background", type: "color", defaultValue: "#0b0714" },
-  { name: "colors.surface", label: "Surface", type: "color", defaultValue: "#171024" },
-  { name: "colors.foreground", label: "Foreground", type: "color", defaultValue: "#f6f1ff" },
+  { name: "colors.accent", label: "Accent", type: "color", defaultValue: "#b794f6", help: "Links, highlights, and the primary button." },
+  { name: "colors.accentSoft", label: "Accent soft", type: "color", defaultValue: "#eadcff", help: "Italic display type and quiet emphasis." },
+  { name: "colors.background", label: "Background", type: "color", defaultValue: "#0b0817" },
+  { name: "colors.surface", label: "Surface", type: "color", defaultValue: "#151027" },
+  { name: "colors.foreground", label: "Foreground", type: "color", defaultValue: "#f4f0fc" },
 ];
 
 const BRAND_FIELDS: AdminField[] = [

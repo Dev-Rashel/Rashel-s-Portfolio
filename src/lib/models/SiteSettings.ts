@@ -190,11 +190,11 @@ const siteSettingsSchema = new Schema<ISiteSettings>(
       default: ["full-stack developer", "react", "next.js", "node.js", "portfolio", "bangladesh"],
     },
     colors: {
-      accent: { type: String, default: "#ff7a6b" },
-      accentSoft: { type: String, default: "#ffc4ad" },
-      background: { type: String, default: "#0b0714" },
-      surface: { type: String, default: "#171024" },
-      foreground: { type: String, default: "#f6f1ff" },
+      accent: { type: String, default: "#b794f6" },
+      accentSoft: { type: String, default: "#eadcff" },
+      background: { type: String, default: "#0b0817" },
+      surface: { type: String, default: "#151027" },
+      foreground: { type: String, default: "#f4f0fc" },
     },
     defaultTheme: { type: String, enum: ["dark", "light", "system"], default: "dark" },
     navItems: {

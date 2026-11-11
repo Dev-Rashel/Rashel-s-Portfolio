@@ -71,7 +71,7 @@ export const categoryInput = z.object({
   slug: slugSchema,
   type: z.enum(["project", "post", "activity", "certification", "general"]).default("general"),
   description: z.string().optional().default(""),
-  color: z.string().optional().default("#ff7a6b"),
+  color: z.string().optional().default("#b794f6"),
   order: z.coerce.number().default(0),
 });
 

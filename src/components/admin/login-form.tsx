@@ -50,7 +50,7 @@ export function AdminLoginForm({ nextPath }: { nextPath?: string }) {
           type="email"
           autoComplete="username"
           {...register("email")}
-          className="field !bg-black/30 !border-white/10 !text-[#f6f1ff] placeholder:!text-white/25"
+          className="field !bg-black/30 !border-white/10 !text-[#f4f0fc] placeholder:!text-white/25"
           placeholder="admin@example.com"
         />
         {errors.email && <p className="mt-1.5 text-xs text-red-300">{errors.email.message}</p>}
@@ -63,7 +63,7 @@ export function AdminLoginForm({ nextPath }: { nextPath?: string }) {
             type={showPassword ? "text" : "password"}
             autoComplete="current-password"
             {...register("password")}
-            className="field !bg-black/30 !border-white/10 !pr-11 !text-[#f6f1ff] placeholder:!text-white/25"
+            className="field !bg-black/30 !border-white/10 !pr-11 !text-[#f4f0fc] placeholder:!text-white/25"
             placeholder="••••••••••••"
           />
           <button
@@ -92,7 +92,7 @@ export function AdminLoginForm({ nextPath }: { nextPath?: string }) {
         type="submit"
         disabled={isSubmitting}
         whileTap={{ scale: 0.985 }}
-        className="flex w-full items-center justify-center gap-2 rounded-full bg-[#ff7a6b] px-5 py-3.5 text-[0.68rem] font-bold uppercase tracking-[0.17em] text-[#0b0714] transition-all duration-300 hover:bg-[#ffc4ad] disabled:cursor-not-allowed disabled:opacity-60"
+        className="flex w-full items-center justify-center gap-2 rounded-full bg-[#b794f6] px-5 py-3.5 text-[0.68rem] font-bold uppercase tracking-[0.17em] text-[#0b0817] transition-all duration-300 hover:bg-[#eadcff] disabled:cursor-not-allowed disabled:opacity-60"
       >
         {isSubmitting ? <Loader2 size={15} className="animate-spin" /> : <LockKeyhole size={14} />}
         {isSubmitting ? "Verifying" : "Enter dashboard"}

@@ -168,7 +168,7 @@ export const collectionConfigs: Record<string, CollectionConfig> = {
       },
       { name: "order", label: "Order", type: "number", defaultValue: 0 },
       { name: "description", label: "Description", type: "textarea", rows: 3, colSpan: 2 },
-      { name: "color", label: "Accent colour", type: "color", colSpan: 2, defaultValue: "#ff7a6b" },
+      { name: "color", label: "Accent colour", type: "color", colSpan: 2, defaultValue: "#b794f6" },
     ],
     columns: [
       { key: "name", label: "Category", type: "primary", secondaryKey: "description" },
@@ -188,7 +188,7 @@ export const collectionConfigs: Record<string, CollectionConfig> = {
         ],
       },
     ],
-    defaults: { type: "general", order: 0, color: "#ff7a6b" },
+    defaults: { type: "general", order: 0, color: "#b794f6" },
     emptyTitle: "No categories yet",
     emptyDescription: "Create a taxonomy for your projects, writing, and activities.",
   },

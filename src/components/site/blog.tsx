@@ -87,7 +87,7 @@ export function Blog({ posts, copy }: { posts: Post[]; copy: SectionCopy }) {
                     </div>
                     <Link
                       href={`/blog/${featured.slug}`}
-                      className="group/link grid h-11 w-11 shrink-0 place-items-center rounded-full border border-[var(--line-strong)] transition-all duration-300 hover:border-[var(--accent)] hover:bg-[var(--accent)] hover:text-[#0b0714]"
+                      className="group/link grid h-11 w-11 shrink-0 place-items-center rounded-full border border-[var(--line-strong)] transition-all duration-300 hover:border-[var(--accent)] hover:bg-[var(--accent)] hover:text-[#0b0817]"
                       aria-label={`Read ${featured.title}`}
                     >
                       <ArrowUpRight size={16} className="transition-transform duration-300 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />

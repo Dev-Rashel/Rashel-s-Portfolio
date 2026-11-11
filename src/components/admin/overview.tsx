@@ -114,16 +114,16 @@ export function Overview() {
           </p>
           <div className="mt-5 space-y-2 rounded-xl border border-white/8 bg-black/25 p-4 font-mono text-[0.68rem] text-white/50">
             <p>
-              <span className="text-[#ff7a6b]">MONGODB_URI</span>=mongodb+srv://…
+              <span className="text-[#b794f6]">MONGODB_URI</span>=mongodb+srv://…
             </p>
             <p>
-              <span className="text-[#ff7a6b]">AUTH_SECRET</span>=a-long-random-string
+              <span className="text-[#b794f6]">AUTH_SECRET</span>=a-long-random-string
             </p>
             <p>
-              <span className="text-[#ff7a6b]">ADMIN_EMAIL</span>=you@example.com
+              <span className="text-[#b794f6]">ADMIN_EMAIL</span>=you@example.com
             </p>
             <p>
-              <span className="text-[#ff7a6b]">ADMIN_PASSWORD</span>=a-strong-password
+              <span className="text-[#b794f6]">ADMIN_PASSWORD</span>=a-strong-password
             </p>
           </div>
           <p className="mt-3 text-xs text-white/30">
@@ -200,7 +200,7 @@ export function Overview() {
           title="Recent messages"
           description="The conversations that started from your contact form."
           actions={
-            <Link href="/admin/dashboard/messages" className="text-[0.52rem] uppercase tracking-[0.14em] text-[#ff7a6b] hover:text-[#ffc4ad]">
+            <Link href="/admin/dashboard/messages" className="text-[0.52rem] uppercase tracking-[0.14em] text-[#b794f6] hover:text-[#eadcff]">
               Open inbox
             </Link>
           }
@@ -221,7 +221,7 @@ export function Overview() {
                   <span
                     className={cn(
                       "mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full",
-                      message.read ? "bg-white/15" : "bg-[#ff7a6b]"
+                      message.read ? "bg-white/15" : "bg-[#b794f6]"
                     )}
                   />
                   <div className="min-w-0 flex-1">
@@ -249,7 +249,7 @@ export function Overview() {
                 <div key={entry.month} className="flex flex-1 flex-col items-center gap-2">
                   <div className="flex h-28 w-full items-end">
                     <div
-                      className="w-full rounded-t bg-gradient-to-t from-[#ff7a6b]/25 to-[#ff7a6b] transition-all"
+                      className="w-full rounded-t bg-gradient-to-t from-[#b794f6]/25 to-[#b794f6] transition-all"
                       style={{ height: `${Math.max(4, (entry.published / maxTimeline) * 100)}%` }}
                       title={`${entry.published} published`}
                     />
@@ -262,7 +262,7 @@ export function Overview() {
             </div>
             <div className="mt-4 flex items-center justify-between border-t border-white/7 pt-3">
               <p className="text-[0.52rem] uppercase tracking-[0.12em] text-white/25">{totalPublished} public pieces</p>
-              <p className="text-[0.52rem] uppercase tracking-[0.12em] text-[#ff7a6b]">
+              <p className="text-[0.52rem] uppercase tracking-[0.12em] text-[#b794f6]">
                 {counts.drafts > 0 ? `${counts.drafts} in progress` : "All published"}
               </p>
             </div>
@@ -275,7 +275,7 @@ export function Overview() {
           title="Latest writing"
           description="The newest entries in your journal."
           actions={
-            <Link href="/admin/dashboard/blog" className="text-[0.52rem] uppercase tracking-[0.14em] text-[#ff7a6b] hover:text-[#ffc4ad]">
+            <Link href="/admin/dashboard/blog" className="text-[0.52rem] uppercase tracking-[0.14em] text-[#b794f6] hover:text-[#eadcff]">
               Manage
             </Link>
           }
@@ -307,7 +307,7 @@ export function Overview() {
           title="Recent projects"
           description="The latest case studies added to your portfolio."
           actions={
-            <Link href="/admin/dashboard/projects" className="text-[0.52rem] uppercase tracking-[0.14em] text-[#ff7a6b] hover:text-[#ffc4ad]">
+            <Link href="/admin/dashboard/projects" className="text-[0.52rem] uppercase tracking-[0.14em] text-[#b794f6] hover:text-[#eadcff]">
               Manage
             </Link>
           }
@@ -387,16 +387,16 @@ function StatCard({
       href={href}
       className={cn(
         "group relative overflow-hidden rounded-xl border bg-white/[0.018] px-5 py-5 transition-all hover:bg-white/[0.035]",
-        accent ? "border-[#ff7a6b]/20" : "border-white/8 hover:border-white/15"
+        accent ? "border-[#b794f6]/20" : "border-white/8 hover:border-white/15"
       )}
     >
       <div className="flex items-start justify-between">
-        <span className="grid h-8 w-8 place-items-center rounded-lg border border-white/8 bg-white/[0.03] text-white/40 transition-colors group-hover:text-[#ff7a6b]">
+        <span className="grid h-8 w-8 place-items-center rounded-lg border border-white/8 bg-white/[0.03] text-white/40 transition-colors group-hover:text-[#b794f6]">
           {icon}
         </span>
-        <ArrowUpRight size={13} className="text-white/15 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#ff7a6b]" />
+        <ArrowUpRight size={13} className="text-white/15 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#b794f6]" />
       </div>
-      <p className="mt-4 font-display text-4xl leading-none text-[#f6f1ff]">{value}</p>
+      <p className="mt-4 font-display text-4xl leading-none text-[#f4f0fc]">{value}</p>
       <p className="mt-1.5 text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-white/40">{label}</p>
       <p className="mt-1 text-[0.58rem] text-white/25">{detail}</p>
     </Link>
@@ -405,8 +405,8 @@ function StatCard({
 
 function MiniStat({ icon, label, value, href }: { icon: React.ReactNode; label: string; value: number; href: string }) {
   return (
-    <Link href={href} className="group bg-[#0a0a08] px-4 py-4 transition-colors hover:bg-white/[0.03]">
-      <div className="flex items-center gap-2 text-white/25 transition-colors group-hover:text-[#ff7a6b]">
+    <Link href={href} className="group bg-[#0b0817] px-4 py-4 transition-colors hover:bg-white/[0.03]">
+      <div className="flex items-center gap-2 text-white/25 transition-colors group-hover:text-[#b794f6]">
         {icon}
         <span className="text-[0.5rem] font-bold uppercase tracking-[0.12em]">{label}</span>
       </div>
@@ -421,7 +421,7 @@ function QuickAction({ href, icon, label }: { href: string; icon: React.ReactNod
       href={href}
       className="flex items-center gap-2.5 rounded-lg px-2.5 py-2.5 text-[0.68rem] text-white/50 transition-colors hover:bg-white/[0.04] hover:text-white/80"
     >
-      <span className="grid h-6 w-6 place-items-center rounded-md border border-white/8 text-[#ff7a6b]">{icon}</span>
+      <span className="grid h-6 w-6 place-items-center rounded-md border border-white/8 text-[#b794f6]">{icon}</span>
       <span className="flex-1">{label}</span>
       <ArrowUpRight size={11} className="text-white/20" />
     </Link>
@@ -432,7 +432,7 @@ function EmptyLine({ text, href, label }: { text: string; href: string; label: s
   return (
     <div className="px-5 py-10 text-center">
       <p className="text-xs text-white/30">{text}</p>
-      <Link href={href} className="mt-2 inline-flex items-center gap-1 text-[0.55rem] uppercase tracking-[0.12em] text-[#ff7a6b]">
+      <Link href={href} className="mt-2 inline-flex items-center gap-1 text-[0.55rem] uppercase tracking-[0.12em] text-[#b794f6]">
         {label} <ArrowUpRight size={10} />
       </Link>
     </div>

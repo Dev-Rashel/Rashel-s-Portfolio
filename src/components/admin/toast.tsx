@@ -41,7 +41,7 @@ export function AdminToaster() {
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: 30, scale: 0.96 }}
             transition={{ duration: 0.3 }}
-            className="pointer-events-auto flex items-start gap-3 rounded-xl border border-white/10 bg-[#151410] p-3.5 shadow-2xl"
+            className="pointer-events-auto flex items-start gap-3 rounded-xl border border-white/10 bg-[#0f0b20] p-3.5 shadow-2xl"
           >
             <span
               className={

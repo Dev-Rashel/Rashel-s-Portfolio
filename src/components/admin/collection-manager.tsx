@@ -232,11 +232,11 @@ export function CollectionManager({
             className="field !w-auto !py-2.5 !text-[0.68rem]"
             aria-label={filter.label}
           >
-            <option value="" className="bg-[#171024]">
+            <option value="" className="bg-[#151027]">
               {filter.label}
             </option>
             {filter.options.map((option) => (
-              <option key={option.value} value={option.value} className="bg-[#171024]">
+              <option key={option.value} value={option.value} className="bg-[#151027]">
                 {option.label}
               </option>
             ))}
@@ -387,7 +387,7 @@ export function CollectionManager({
               onClick={closePanel}
             />
             <motion.aside
-              className="fixed inset-y-0 right-0 z-[91] flex w-full max-w-2xl flex-col border-l border-white/10 bg-[#0a0a08] shadow-2xl"
+              className="fixed inset-y-0 right-0 z-[91] flex w-full max-w-2xl flex-col border-l border-white/10 bg-[#0b0817] shadow-2xl"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -395,10 +395,10 @@ export function CollectionManager({
             >
               <div className="flex items-center justify-between gap-4 border-b border-white/8 px-5 py-4">
                 <div>
-                  <p className="text-[0.48rem] uppercase tracking-[0.2em] text-[#ff7a6b]">
+                  <p className="text-[0.48rem] uppercase tracking-[0.2em] text-[#b794f6]">
                     {editing ? "Editing" : "Creating"}
                   </p>
-                  <h3 className="mt-1 font-display text-2xl text-[#f6f1ff]">
+                  <h3 className="mt-1 font-display text-2xl text-[#f4f0fc]">
                     {editing ? `Edit ${singular.toLowerCase()}` : `New ${singular.toLowerCase()}`}
                   </h3>
                 </div>
@@ -438,7 +438,7 @@ export function CollectionManager({
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between gap-3 border-t border-white/8 bg-[#0a0a08] px-5 py-4">
+                <div className="flex items-center justify-between gap-3 border-t border-white/8 bg-[#0b0817] px-5 py-4">
                   <span className="text-[0.52rem] uppercase tracking-[0.14em] text-white/22">
                     {editing ? "Changes publish instantly" : "Saved to the live database"}
                   </span>
@@ -469,7 +469,7 @@ export function CollectionManager({
               onClick={() => !deleting && setDeleteTarget(null)}
             />
             <motion.div
-              className="relative w-full max-w-md rounded-2xl border border-white/10 bg-[#171024] p-6 shadow-2xl"
+              className="relative w-full max-w-md rounded-2xl border border-white/10 bg-[#151027] p-6 shadow-2xl"
               initial={{ opacity: 0, y: 16, scale: 0.97 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.97 }}
@@ -509,7 +509,7 @@ function Cell({ item, column }: { item: Row; column: AdminColumn }) {
     const image = column.imageKey ? String(item[column.imageKey] || "") : "";
     return (
       <div className="flex items-center gap-3">
-        <span className="relative grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-lg border border-white/10 bg-white/[0.03] font-display text-sm text-[#ff7a6b]">
+        <span className="relative grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-lg border border-white/10 bg-white/[0.03] font-display text-sm text-[#b794f6]">
           {image ? (
             <Image src={image} alt="" fill sizes="36px" className="object-cover" />
           ) : (

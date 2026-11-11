@@ -10,11 +10,11 @@ export const defaultSettings = {
   siteDescription: "A cinematic portfolio and digital garden by Rashel Mahmud.",
   keywords: ["full-stack developer", "react", "next.js", "node.js", "portfolio", "bangladesh"],
   colors: {
-    accent: "#ff7a6b",
-    accentSoft: "#ffc4ad",
-    background: "#0b0714",
-    surface: "#171024",
-    foreground: "#f6f1ff",
+    accent: "#b794f6",
+    accentSoft: "#eadcff",
+    background: "#0b0817",
+    surface: "#151027",
+    foreground: "#f4f0fc",
   },
   defaultTheme: "dark" as const,
   navItems: [
@@ -537,15 +537,15 @@ export const defaultAchievements = [
 ];
 
 export const defaultCategories = [
-  { name: "Technical Blog", slug: "technical-blog", type: "post", description: "Deep dives and practical notes.", color: "#ff7a6b", order: 0 },
-  { name: "Learning Journey", slug: "learning-journey", type: "post", description: "Notes from the road.", color: "#a7b7a0", order: 1 },
-  { name: "Full-Stack", slug: "full-stack", type: "project", description: "End-to-end product engineering.", color: "#ff7a6b", order: 2 },
-  { name: "Design Engineering", slug: "design-engineering", type: "project", description: "Where design meets code.", color: "#c8a4a0", order: 3 },
-  { name: "Product", slug: "product", type: "project", description: "Products with a point of view.", color: "#a7b7a0", order: 4 },
-  { name: "Content Platform", slug: "content-platform", type: "project", description: "Publishing and editorial tools.", color: "#b3aec9", order: 5 },
-  { name: "Competition", slug: "competition", type: "activity", description: "Competitive programming and hackathons.", color: "#ff7a6b", order: 6 },
-  { name: "Workshop", slug: "workshop", type: "activity", description: "Teaching and facilitation.", color: "#a7b7a0", order: 7 },
-  { name: "Community", slug: "community", type: "activity", description: "Community and open source.", color: "#c8a4a0", order: 8 },
+  { name: "Technical Blog", slug: "technical-blog", type: "post", description: "Deep dives and practical notes.", color: "#b794f6", order: 0 },
+  { name: "Learning Journey", slug: "learning-journey", type: "post", description: "Notes from the road.", color: "#8fb8ff", order: 1 },
+  { name: "Full-Stack", slug: "full-stack", type: "project", description: "End-to-end product engineering.", color: "#b794f6", order: 2 },
+  { name: "Design Engineering", slug: "design-engineering", type: "project", description: "Where design meets code.", color: "#f0a6ca", order: 3 },
+  { name: "Product", slug: "product", type: "project", description: "Products with a point of view.", color: "#8fb8ff", order: 4 },
+  { name: "Content Platform", slug: "content-platform", type: "project", description: "Publishing and editorial tools.", color: "#d9c4ff", order: 5 },
+  { name: "Competition", slug: "competition", type: "activity", description: "Competitive programming and hackathons.", color: "#b794f6", order: 6 },
+  { name: "Workshop", slug: "workshop", type: "activity", description: "Teaching and facilitation.", color: "#8fb8ff", order: 7 },
+  { name: "Community", slug: "community", type: "activity", description: "Community and open source.", color: "#f0a6ca", order: 8 },
 ];
 
 export const seededAt = now;

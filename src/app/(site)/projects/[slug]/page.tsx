@@ -197,7 +197,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 {next.title}
               </h2>
             </div>
-            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-[var(--line-strong)] transition-all duration-300 group-hover:border-[var(--accent)] group-hover:bg-[var(--accent)] group-hover:text-[#0b0714]">
+            <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-[var(--line-strong)] transition-all duration-300 group-hover:border-[var(--accent)] group-hover:bg-[var(--accent)] group-hover:text-[#0b0817]">
               <ArrowUpRight size={18} />
             </span>
           </Link>

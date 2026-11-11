@@ -24,7 +24,7 @@ const categorySchema = new Schema<ICategory>(
       index: true,
     },
     description: { type: String, default: "" },
-    color: { type: String, default: "#ff7a6b" },
+    color: { type: String, default: "#b794f6" },
     order: { type: Number, default: 0 },
   },
   { timestamps: true }

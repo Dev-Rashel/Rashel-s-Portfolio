@@ -179,7 +179,7 @@ export function MessagesManager() {
                 onClick={() => setFilter(item.key)}
                 className={cn(
                   "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[0.54rem] font-bold uppercase tracking-[0.12em] transition-colors",
-                  filter === item.key ? "bg-[#ff7a6b] text-[#0b0714]" : "text-white/35 hover:bg-white/5 hover:text-white/70"
+                  filter === item.key ? "bg-[#b794f6] text-[#0b0817]" : "text-white/35 hover:bg-white/5 hover:text-white/70"
                 )}
               >
                 <Icon size={10} /> {item.label}
@@ -187,7 +187,7 @@ export function MessagesManager() {
                   <span
                     className={cn(
                       "rounded-full px-1.5 py-0.5 text-[0.45rem]",
-                      filter === "unread" ? "bg-[#0b0714]/15 text-[#0b0714]" : "bg-[#ff7a6b]/15 text-[#ff7a6b]"
+                      filter === "unread" ? "bg-[#0b0817]/15 text-[#0b0817]" : "bg-[#b794f6]/15 text-[#b794f6]"
                     )}
                   >
                     {unreadCount}
@@ -244,7 +244,7 @@ export function MessagesManager() {
                     selectedId === message._id ? "bg-white/[0.055]" : "hover:bg-white/[0.025]"
                   )}
                 >
-                  <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full border border-white/10 bg-white/[0.03] font-display text-sm text-[#ff7a6b]">
+                  <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full border border-white/10 bg-white/[0.03] font-display text-sm text-[#b794f6]">
                     {message.name.slice(0, 1).toUpperCase()}
                   </span>
                   <div className="min-w-0 flex-1">
@@ -261,7 +261,7 @@ export function MessagesManager() {
                     </p>
                     <p className="mt-1 truncate text-[0.56rem] leading-relaxed text-white/22">{message.message}</p>
                     <div className="mt-1.5 flex items-center gap-1.5">
-                      {!message.read && <span className="h-1 w-1 rounded-full bg-[#ff7a6b]" />}
+                      {!message.read && <span className="h-1 w-1 rounded-full bg-[#b794f6]" />}
                       {message.archived && <StatusBadge tone="neutral">Archived</StatusBadge>}
                     </div>
                   </div>
@@ -284,7 +284,7 @@ export function MessagesManager() {
                     </div>
                     <p className="mt-1.5 text-[0.62rem] text-white/35">
                       From <span className="text-white/65">{selected.name}</span> ·{" "}
-                      <a href={`mailto:${selected.email}`} className="text-[#ff7a6b] hover:text-[#ffc4ad]">
+                      <a href={`mailto:${selected.email}`} className="text-[#b794f6] hover:text-[#eadcff]">
                         {selected.email}
                       </a>
                     </p>
@@ -295,7 +295,7 @@ export function MessagesManager() {
                   <div className="flex flex-wrap items-center gap-1.5">
                     <a
                       href={`mailto:${selected.email}?subject=${encodeURIComponent(`Re: ${selected.subject}`)}`}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-[#ff7a6b]/25 bg-[#ff7a6b]/10 px-3 py-1.5 text-[0.5rem] font-bold uppercase tracking-[0.12em] text-[#ff7a6b] transition-colors hover:bg-[#ff7a6b]/15"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-[#b794f6]/25 bg-[#b794f6]/10 px-3 py-1.5 text-[0.5rem] font-bold uppercase tracking-[0.12em] text-[#b794f6] transition-colors hover:bg-[#b794f6]/15"
                     >
                       <Reply size={10} /> Reply
                     </a>
@@ -361,7 +361,7 @@ export function MessagesManager() {
               onClick={() => setConfirmDelete(null)}
             />
             <motion.div
-              className="relative w-full max-w-md rounded-2xl border border-white/10 bg-[#171024] p-6 shadow-2xl"
+              className="relative w-full max-w-md rounded-2xl border border-white/10 bg-[#151027] p-6 shadow-2xl"
               initial={{ opacity: 0, y: 16, scale: 0.97 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.97 }}
