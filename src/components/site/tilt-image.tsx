@@ -10,9 +10,10 @@ type TiltImageProps = {
   alt: string;
   className?: string;
   badge?: string;
+  reveal?: boolean;
 };
 
-export function TiltImage({ src, alt, className = "", badge }: TiltImageProps) {
+export function TiltImage({ src, alt, className = "", badge, reveal = true }: TiltImageProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [hovered, setHovered] = useState(false);
   const reduceMotion = useReducedMotion();
@@ -49,7 +50,12 @@ export function TiltImage({ src, alt, className = "", badge }: TiltImageProps) {
         className="relative h-full w-full"
         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
       >
-        <div className="absolute inset-0 overflow-hidden rounded-[1.2rem] border border-[var(--line)] bg-[var(--surface)]">
+        <motion.div
+          className="absolute inset-0 overflow-hidden rounded-[1.2rem] border border-[var(--line)] bg-[var(--surface)]"
+          initial={{ clipPath: "inset(100% 0 0 0)" }}
+          animate={{ clipPath: reveal ? "inset(0% 0 0 0)" : "inset(100% 0 0 0)" }}
+          transition={{ duration: 1.25, delay: 0.75, ease: [0.76, 0, 0.24, 1] }}
+        >
           {src ? (
             <motion.div className="absolute inset-[-4%]" style={{ x: imageX, y: imageY }}>
               <Image
@@ -68,10 +74,10 @@ export function TiltImage({ src, alt, className = "", badge }: TiltImageProps) {
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/10" />
           <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
-        </div>
+        </motion.div>
         {badge && (
           <motion.div
-            className="absolute -bottom-4 -left-4 hidden rounded-full border border-[var(--line-strong)] bg-[var(--background)] px-4 py-2 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-[var(--foreground-soft)] sm:block"
+            className="absolute -bottom-2 -left-4 hidden rounded-full border border-[var(--line-strong)] bg-[var(--background)] px-4 py-2 text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-[var(--foreground-soft)] sm:block"
             animate={{ y: hovered ? -4 : 0 }}
             transition={{ duration: 0.4 }}
           >

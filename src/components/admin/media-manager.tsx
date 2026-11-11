@@ -230,10 +230,10 @@ export function MediaManager() {
         }}
         className={cn(
           "mb-4 flex flex-col items-center justify-center rounded-xl border border-dashed px-6 py-7 text-center transition-colors",
-          dragging ? "border-[#e9b25f] bg-[#e9b25f]/[0.04]" : "border-white/10 bg-white/[0.012]"
+          dragging ? "border-[#ff7a6b] bg-[#ff7a6b]/[0.04]" : "border-white/10 bg-white/[0.012]"
         )}
       >
-        <span className="grid h-9 w-9 place-items-center rounded-full border border-white/10 text-[#e9b25f]">
+        <span className="grid h-9 w-9 place-items-center rounded-full border border-white/10 text-[#ff7a6b]">
           {uploading ? <Loader2 size={15} className="animate-spin" /> : <UploadCloud size={15} />}
         </span>
         <p className="mt-2.5 text-xs text-white/55">
@@ -263,9 +263,9 @@ export function MediaManager() {
           className="field !w-auto !py-2.5 !text-[0.68rem]"
           aria-label="Filter media by type"
         >
-          <option value="" className="bg-[#111826]">All media</option>
-          <option value="image" className="bg-[#111826]">Images</option>
-          <option value="raw" className="bg-[#111826]">Documents</option>
+          <option value="" className="bg-[#171024]">All media</option>
+          <option value="image" className="bg-[#171024]">Images</option>
+          <option value="raw" className="bg-[#171024]">Documents</option>
         </select>
         <span className="text-[0.52rem] uppercase tracking-[0.12em] text-white/25">{pagination.total} assets</span>
       </div>
@@ -330,7 +330,7 @@ export function MediaManager() {
                       <button
                         type="button"
                         onClick={() => void copyUrl(item)}
-                        className="grid h-8 w-8 place-items-center rounded-full border border-white/15 bg-black/40 text-white/80 hover:border-[#e9b25f]/50 hover:text-[#e9b25f]"
+                        className="grid h-8 w-8 place-items-center rounded-full border border-white/15 bg-black/40 text-white/80 hover:border-[#ff7a6b]/50 hover:text-[#ff7a6b]"
                         title="Copy URL"
                         aria-label="Copy URL"
                       >
@@ -339,7 +339,7 @@ export function MediaManager() {
                       <button
                         type="button"
                         onClick={() => openAlt(item)}
-                        className="grid h-8 w-8 place-items-center rounded-full border border-white/15 bg-black/40 text-white/80 hover:border-[#e9b25f]/50 hover:text-[#e9b25f]"
+                        className="grid h-8 w-8 place-items-center rounded-full border border-white/15 bg-black/40 text-white/80 hover:border-[#ff7a6b]/50 hover:text-[#ff7a6b]"
                         title="Edit alt text"
                         aria-label="Edit alt text"
                       >
@@ -349,7 +349,7 @@ export function MediaManager() {
                         href={item.secureUrl || item.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="grid h-8 w-8 place-items-center rounded-full border border-white/15 bg-black/40 text-white/80 hover:border-[#e9b25f]/50 hover:text-[#e9b25f]"
+                        className="grid h-8 w-8 place-items-center rounded-full border border-white/15 bg-black/40 text-white/80 hover:border-[#ff7a6b]/50 hover:text-[#ff7a6b]"
                         title="Open asset"
                         aria-label="Open asset"
                       >
@@ -427,14 +427,14 @@ export function MediaManager() {
               onClick={() => !savingAlt && setEditing(null)}
             />
             <motion.div
-              className="relative w-full max-w-lg overflow-hidden rounded-2xl border border-white/10 bg-[#111826] shadow-2xl"
+              className="relative w-full max-w-lg overflow-hidden rounded-2xl border border-white/10 bg-[#171024] shadow-2xl"
               initial={{ opacity: 0, y: 16, scale: 0.97 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.97 }}
             >
               <div className="flex items-start justify-between gap-3 border-b border-white/8 px-5 py-4">
                 <div className="min-w-0">
-                  <p className="text-[0.48rem] uppercase tracking-[0.18em] text-[#e9b25f]">Media details</p>
+                  <p className="text-[0.48rem] uppercase tracking-[0.18em] text-[#ff7a6b]">Media details</p>
                   <h3 className="mt-1 truncate font-display text-2xl text-white">{editing.name || "Untitled asset"}</h3>
                 </div>
                 <button
@@ -456,7 +456,7 @@ export function MediaManager() {
                     href={editing.secureUrl || editing.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 rounded-xl border border-white/10 bg-black/20 px-4 py-5 text-sm text-[#e9b25f]"
+                    className="flex items-center gap-3 rounded-xl border border-white/10 bg-black/20 px-4 py-5 text-sm text-[#ff7a6b]"
                   >
                     <FileText size={18} /> Open document
                   </a>
@@ -527,7 +527,7 @@ export function MediaManager() {
               onClick={() => !deleting && setDeleteTarget(null)}
             />
             <motion.div
-              className="relative w-full max-w-md rounded-2xl border border-white/10 bg-[#111826] p-6 shadow-2xl"
+              className="relative w-full max-w-md rounded-2xl border border-white/10 bg-[#171024] p-6 shadow-2xl"
               initial={{ opacity: 0, y: 16, scale: 0.97 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.97 }}

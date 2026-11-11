@@ -19,8 +19,8 @@ export function PageHeader({
   return (
     <div className={cn("mb-7 flex flex-col justify-between gap-4 sm:flex-row sm:items-end", className)}>
       <div>
-        {eyebrow && <p className="text-[0.52rem] font-bold uppercase tracking-[0.2em] text-[#e9b25f]">{eyebrow}</p>}
-        <h2 className="mt-1.5 font-display text-3xl leading-tight text-[#f4efe6] sm:text-[2.1rem]">{title}</h2>
+        {eyebrow && <p className="text-[0.52rem] font-bold uppercase tracking-[0.2em] text-[#ff7a6b]">{eyebrow}</p>}
+        <h2 className="mt-1.5 font-display text-3xl leading-tight text-[#f6f1ff] sm:text-[2.1rem]">{title}</h2>
         {description && <p className="mt-1.5 max-w-xl text-xs leading-relaxed text-white/35">{description}</p>}
       </div>
       {actions && <div className="flex flex-wrap items-center gap-2">{actions}</div>}
@@ -69,9 +69,9 @@ export function AdminButton({
     <button
       className={cn(
         "inline-flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-[0.6rem] font-bold uppercase tracking-[0.14em] transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50",
-        variant === "primary" && "bg-[#e9b25f] text-[#080b11] hover:bg-[#f8dca9]",
+        variant === "primary" && "bg-[#ff7a6b] text-[#0b0714] hover:bg-[#ffc4ad]",
         variant === "ghost" && "border border-white/10 text-white/60 hover:border-white/25 hover:text-white",
-        variant === "soft" && "border border-[#e9b25f]/20 bg-[#e9b25f]/10 text-[#e9b25f] hover:bg-[#e9b25f]/15",
+        variant === "soft" && "border border-[#ff7a6b]/20 bg-[#ff7a6b]/10 text-[#ff7a6b] hover:bg-[#ff7a6b]/15",
         variant === "danger" && "border border-red-400/20 bg-red-400/10 text-red-300 hover:bg-red-400/15",
         className
       )}
@@ -96,7 +96,7 @@ export function StatusBadge({
         tone === "success" && "border-emerald-400/20 bg-emerald-400/10 text-emerald-300",
         tone === "warning" && "border-amber-400/20 bg-amber-400/10 text-amber-300",
         tone === "danger" && "border-red-400/20 bg-red-400/10 text-red-300",
-        tone === "accent" && "border-[#e9b25f]/20 bg-[#e9b25f]/10 text-[#e9b25f]",
+        tone === "accent" && "border-[#ff7a6b]/20 bg-[#ff7a6b]/10 text-[#ff7a6b]",
         tone === "neutral" && "border-white/10 bg-white/[0.03] text-white/40"
       )}
     >

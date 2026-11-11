@@ -107,7 +107,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
 
 function hexToRgb(hex: string) {
   const value = hex.replace("#", "");
-  if (value.length !== 6) return "233, 178, 95";
+  if (value.length !== 6) return "255, 122, 107";
   const [r, g, b] = [value.slice(0, 2), value.slice(2, 4), value.slice(4, 6)].map((part) => parseInt(part, 16));
   return `${r}, ${g}, ${b}`;
 }

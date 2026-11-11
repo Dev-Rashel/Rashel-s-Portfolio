@@ -10,11 +10,11 @@ export const defaultSettings = {
   siteDescription: "A cinematic portfolio and digital garden by Rashel Mahmud.",
   keywords: ["full-stack developer", "react", "next.js", "node.js", "portfolio", "bangladesh"],
   colors: {
-    accent: "#e9b25f",
-    accentSoft: "#f8dca9",
-    background: "#080b11",
-    surface: "#111826",
-    foreground: "#f4efe6",
+    accent: "#ff7a6b",
+    accentSoft: "#ffc4ad",
+    background: "#0b0714",
+    surface: "#171024",
+    foreground: "#f6f1ff",
   },
   defaultTheme: "dark" as const,
   navItems: [
@@ -537,13 +537,13 @@ export const defaultAchievements = [
 ];
 
 export const defaultCategories = [
-  { name: "Technical Blog", slug: "technical-blog", type: "post", description: "Deep dives and practical notes.", color: "#e9b25f", order: 0 },
+  { name: "Technical Blog", slug: "technical-blog", type: "post", description: "Deep dives and practical notes.", color: "#ff7a6b", order: 0 },
   { name: "Learning Journey", slug: "learning-journey", type: "post", description: "Notes from the road.", color: "#a7b7a0", order: 1 },
-  { name: "Full-Stack", slug: "full-stack", type: "project", description: "End-to-end product engineering.", color: "#e9b25f", order: 2 },
+  { name: "Full-Stack", slug: "full-stack", type: "project", description: "End-to-end product engineering.", color: "#ff7a6b", order: 2 },
   { name: "Design Engineering", slug: "design-engineering", type: "project", description: "Where design meets code.", color: "#c8a4a0", order: 3 },
   { name: "Product", slug: "product", type: "project", description: "Products with a point of view.", color: "#a7b7a0", order: 4 },
   { name: "Content Platform", slug: "content-platform", type: "project", description: "Publishing and editorial tools.", color: "#b3aec9", order: 5 },
-  { name: "Competition", slug: "competition", type: "activity", description: "Competitive programming and hackathons.", color: "#e9b25f", order: 6 },
+  { name: "Competition", slug: "competition", type: "activity", description: "Competitive programming and hackathons.", color: "#ff7a6b", order: 6 },
   { name: "Workshop", slug: "workshop", type: "activity", description: "Teaching and facilitation.", color: "#a7b7a0", order: 7 },
   { name: "Community", slug: "community", type: "activity", description: "Community and open source.", color: "#c8a4a0", order: 8 },
 ];

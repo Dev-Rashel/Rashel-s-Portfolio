@@ -236,12 +236,12 @@ After deploying, sign in at `https://your-domain.com/admin`.
 
 ## Design system
 
-- **Background:** near-black `#070706`
-- **Foreground:** bone `#f2ece0`
-- **Accent:** champagne gold `#d3b47c`
+- **Background:** deep violet `#0b0714`
+- **Foreground:** lavender white `#f6f1ff`
+- **Accents:** coral `#ff7a6b`, peach `#ffc4ad`, mint `#4be1c3`, violet `#a78bfa`
 - **Display type:** Instrument Serif
 - **Body type:** Manrope variable
-- **Admin palette:** fixed dark control-room palette scoped under `.admin-root`, independent of public theme changes.
+- **Admin palette:** fixed violet control-room palette scoped under `.admin-root`, independent of public theme changes.
 
 Theme colours, default light/dark mode, section visibility, section order and section copy are all editable from the dashboard.
 

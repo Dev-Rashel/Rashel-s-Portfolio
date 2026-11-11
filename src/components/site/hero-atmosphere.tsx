@@ -20,8 +20,9 @@ export function HeroAtmosphere() {
     let pointer = { x: -1000, y: -1000 };
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-    type Particle = { x: number; y: number; vx: number; vy: number; r: number; alpha: number };
+    type Particle = { x: number; y: number; vx: number; vy: number; r: number; alpha: number; color: string };
     let particles: Particle[] = [];
+    const palette = ["255,122,107", "75,225,195", "167,139,250", "255,196,173"];
 
     const resize = () => {
       const rect = canvas.getBoundingClientRect();
@@ -38,6 +39,7 @@ export function HeroAtmosphere() {
         vy: (Math.random() - 0.5) * 0.12,
         r: Math.random() * 1.3 + 0.35,
         alpha: Math.random() * 0.32 + 0.08,
+        color: palette[Math.floor(Math.random() * palette.length)],
       }));
     };
 
@@ -66,7 +68,7 @@ export function HeroAtmosphere() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(233, 178, 95, ${p.alpha})`;
+        ctx.fillStyle = `rgba(${p.color}, ${p.alpha})`;
         ctx.fill();
       }
       raf = requestAnimationFrame(draw);

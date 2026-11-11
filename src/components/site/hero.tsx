@@ -28,7 +28,7 @@ export function Hero({ profile, scrollTarget = "about" }: { profile: PublicProfi
   return (
     <section id="home" className="relative flex min-h-[100svh] flex-col overflow-hidden pt-[74px]">
       <HeroAtmosphere />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,rgba(var(--accent-rgb),0.09),transparent_58%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_28%,rgba(var(--accent-rgb),0.16),transparent_56%),radial-gradient(ellipse_at_16%_76%,rgba(var(--accent-3-rgb),0.14),transparent_58%),radial-gradient(ellipse_at_46%_54%,rgba(var(--accent-2-rgb),0.07),transparent_62%)]" />
       <div className="pointer-events-none absolute inset-y-0 left-[8%] hidden w-px bg-gradient-to-b from-transparent via-[var(--line)] to-transparent lg:block" />
       <div className="pointer-events-none absolute inset-y-0 right-[8%] hidden w-px bg-gradient-to-b from-transparent via-[var(--line)] to-transparent lg:block" />
       <div
@@ -68,7 +68,7 @@ export function Hero({ profile, scrollTarget = "about" }: { profile: PublicProfi
               {profile.designation}
             </motion.p>
 
-            <h1 className="display-title select-none text-[clamp(3.4rem,8.2vw,7.4rem)]">
+            <h1 className="display-title select-none text-[clamp(2.9rem,6.6vw,6.1rem)]">
               <CharReveal text={first} className="block text-[var(--foreground)]" delay={0.2} playOnLoad />
               {rest && (
                 <CharReveal
@@ -151,9 +151,9 @@ export function Hero({ profile, scrollTarget = "about" }: { profile: PublicProfi
 
           <motion.div
             className="relative mx-auto w-full max-w-[380px] lg:col-span-4 lg:max-w-none"
-            initial={{ opacity: 0, clipPath: "inset(100% 0 0 0)" }}
-            animate={ready ? { opacity: 1, clipPath: "inset(0% 0 0 0)" } : {}}
-            transition={{ duration: 1.25, delay: 0.75, ease: [0.76, 0, 0.24, 1] }}
+            initial={{ opacity: 0 }}
+            animate={ready ? { opacity: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.75 }}
           >
             <div className="relative">
               <div className="absolute -inset-6 rounded-[2rem] border border-[var(--line)] opacity-60" />
@@ -165,6 +165,7 @@ export function Hero({ profile, scrollTarget = "about" }: { profile: PublicProfi
                 alt={`${profile.fullName} — ${profile.designation}`}
                 className="aspect-[4/5] w-full"
                 badge={`${profile.location} · ${new Date().getFullYear()}`}
+                reveal={ready}
               />
               <div className="absolute -bottom-6 -right-3 hidden h-24 w-24 items-center justify-center rounded-full border border-[var(--line-strong)] bg-[var(--background)] sm:flex lg:-right-7">
                 <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full animate-spin-slow">

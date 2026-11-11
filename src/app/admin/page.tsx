@@ -17,8 +17,8 @@ export default async function AdminLoginPage({
 }) {
   const { next } = await searchParams;
   return (
-    <main className="relative flex min-h-screen overflow-hidden bg-[#080b11] text-[#f4efe6]">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_20%_20%,rgba(233,178,95,0.12),transparent_55%),radial-gradient(ellipse_at_80%_85%,rgba(84,179,163,0.08),transparent_55%)]" />
+    <main className="relative flex min-h-screen overflow-hidden bg-[#0b0714] text-[#f6f1ff]">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_20%_20%,rgba(255,122,107,0.12),transparent_55%),radial-gradient(ellipse_at_80%_85%,rgba(75,225,195,0.08),transparent_55%)]" />
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.18]"
         style={{
@@ -37,13 +37,13 @@ export default async function AdminLoginPage({
         <div>
           <div className="flex items-center gap-3">
             <span className="grid h-10 w-10 place-items-center rounded-full border border-white/15">
-              <Fingerprint size={18} className="text-[#e9b25f]" />
+              <Fingerprint size={18} className="text-[#ff7a6b]" />
             </span>
             <div className="text-[0.55rem] uppercase tracking-[0.26em] text-white/35">Private workspace</div>
           </div>
           <h1 className="mt-8 max-w-2xl font-display text-[clamp(4rem,7vw,7.5rem)] leading-[0.86] tracking-[-0.04em]">
             The quiet <br />
-            <span className="italic text-[#e9b25f]">control room.</span>
+            <span className="italic text-[#ff7a6b]">control room.</span>
           </h1>
           <p className="mt-7 max-w-sm text-sm leading-relaxed text-white/40">
             A private space for shaping the portfolio — every project, word, image, and detail. Authorised access only.
@@ -75,7 +75,7 @@ export default async function AdminLoginPage({
 
           <div className="rounded-2xl border border-white/10 bg-white/[0.025] p-6 shadow-2xl backdrop-blur-xl sm:p-8">
             <div className="flex items-center justify-between">
-              <span className="grid h-11 w-11 place-items-center rounded-full border border-[#e9b25f]/30 bg-[#e9b25f]/10 text-[#e9b25f]">
+              <span className="grid h-11 w-11 place-items-center rounded-full border border-[#ff7a6b]/30 bg-[#ff7a6b]/10 text-[#ff7a6b]">
                 <ShieldCheck size={19} />
               </span>
               <span className="flex items-center gap-1.5 rounded-full border border-white/10 px-2.5 py-1 text-[0.48rem] uppercase tracking-[0.18em] text-white/30">
