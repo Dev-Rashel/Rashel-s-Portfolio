@@ -44,6 +44,21 @@ const config: Config = {
         },
         ember: "#ff5c8a",
       },
+      borderWidth: {
+        DEFAULT: "2px",
+        0: "0px",
+        2: "2px",
+        4: "4px",
+        8: "8px",
+      },
+      ringWidth: {
+        DEFAULT: "2px",
+        0: "0px",
+        1: "2px",
+        2: "2px",
+        4: "4px",
+        8: "8px",
+      },
       fontFamily: {
         sans: ["Manrope Variable", "ui-sans-serif", "system-ui", "sans-serif"],
         display: ["Instrument Serif", "Georgia", "serif"],

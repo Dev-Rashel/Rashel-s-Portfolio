@@ -110,7 +110,7 @@ img {
 }
 
 :focus-visible {
-  outline: 1px solid var(--accent);
+  outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
 
@@ -164,7 +164,7 @@ img {
     background: color-mix(in srgb, var(--surface) 55%, transparent);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
-    border: 1px solid var(--line);
+    border: 2px solid var(--line);
   }
 
   .section-shell {
@@ -236,7 +236,7 @@ img {
     justify-content: center;
     gap: 0.65rem;
     border-radius: 999px;
-    border: 1px solid var(--line-strong);
+    border: 2px solid var(--line-strong);
     padding: 0.95rem 1.55rem;
     font-size: 0.79rem;
     font-weight: 600;
@@ -253,7 +253,7 @@ img {
   .tag {
     display: inline-flex;
     align-items: center;
-    border: 1px solid var(--line);
+    border: 2px solid var(--line);
     border-radius: 999px;
     padding: 0.28rem 0.68rem;
     font-size: 0.65rem;
@@ -266,7 +266,7 @@ img {
   .field {
     width: 100%;
     border-radius: 0.8rem;
-    border: 1px solid var(--line);
+    border: 2px solid var(--line);
     background: color-mix(in srgb, var(--surface) 72%, transparent);
     padding: 0.85rem 1rem;
     color: var(--foreground);
@@ -383,7 +383,7 @@ img {
   text-underline-offset: 4px;
 }
 .rich-content blockquote {
-  border-left: 1px solid var(--accent);
+  border-left: 2px solid var(--accent);
   padding-left: 1.5rem;
   font-family: "Instrument Serif", Georgia, serif;
   font-size: clamp(1.5rem, 2.5vw, 2.1rem);
@@ -401,11 +401,11 @@ img {
 .rich-content img {
   width: 100%;
   border-radius: 1rem;
-  border: 1px solid var(--line);
+  border: 2px solid var(--line);
 }
 .rich-content pre {
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 2px solid var(--line);
   border-radius: 0.8rem;
   padding: 1.25rem;
   overflow-x: auto;
@@ -419,13 +419,13 @@ img {
 .rich-content p code,
 .rich-content li code {
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 2px solid var(--line);
   padding: 0.12rem 0.35rem;
   border-radius: 0.3rem;
 }
 .rich-content hr {
   border: 0;
-  border-top: 1px solid var(--line);
+  border-top: 2px solid var(--line);
   margin-block: 2.5rem;
 }
 
