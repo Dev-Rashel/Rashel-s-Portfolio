@@ -1,0 +1,55 @@
+{
+  "name": "rashel-portfolio-cms",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cinematic full-stack developer portfolio with a complete custom CMS",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "seed": "tsx scripts/seed.ts",
+    "seed:demo": "tsx scripts/seed.ts --demo"
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "^5.2.5",
+    "@fontsource/instrument-serif": "^5.2.5",
+    "@hookform/resolvers": "^5.0.1",
+    "@tiptap/extension-image": "^3.33.1",
+    "@tiptap/extension-link": "^3.33.1",
+    "@tiptap/extension-placeholder": "^3.33.1",
+    "@tiptap/extension-text-align": "^3.33.1",
+    "@tiptap/extensions": "^3.33.1",
+    "@tiptap/react": "^3.33.1",
+    "@tiptap/starter-kit": "^3.33.1",
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.6.0",
+    "framer-motion": "^12.6.3",
+    "gsap": "^3.12.7",
+    "jose": "^5.10.0",
+    "lenis": "^1.2.3",
+    "lucide-react": "^0.483.0",
+    "mongoose": "^8.13.0",
+    "next": "^15.5.29",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-hook-form": "^7.54.2",
+    "zod": "^4.6.7"
+  },
+  "overrides": {
+    "postcss": "$postcss",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^22.13.14",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}
